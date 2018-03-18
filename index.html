@@ -49,7 +49,7 @@ var theta = function(r) {
   return -2*Math.PI*r;
 };
 
-var arc = d3.svg.arc()
+var arc = d3.arc()
   .startAngle(0)
   .endAngle(2*Math.PI);
 
@@ -69,7 +69,7 @@ var svg = d3.select("#chart").append("svg")
 
 var pieces = d3.range(start, end+0.001, (end-start)/1000);
 
-var spiral = d3.svg.line.radial()
+var spiral = d3.line.radial()
   .interpolate("cardinal")
   .angle(theta)
   .radius(radius);
@@ -110,7 +110,7 @@ svg.selectAll(".spiral")
 
 function radial_tick(selection) {
   selection.each(function(axis_num) {
-    d3.svg.axis()
+    d3.axis()
       .scale(radius)
       .ticks(5)
       .tickValues( axis_num == tick_axis ? null : [])
