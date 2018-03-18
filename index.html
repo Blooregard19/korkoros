@@ -110,7 +110,7 @@ svg.selectAll(".spiral")
 
 function radial_tick(selection) {
   selection.each(function(axis_num) {
-    d3.axis()
+    d3.axisBottom()
       .scale(radius)
       .ticks(5)
       .tickValues( axis_num == tick_axis ? null : [])
