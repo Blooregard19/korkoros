@@ -114,7 +114,7 @@ function radial_tick(selection) {
       .scale(radius)
       .ticks(5)
       .tickValues( axis_num == tick_axis ? null : [])
-      .orient("bottom")(d3.select(this))
+      //.orient("bottom")(d3.select(this))
 
     d3.select(this)
       .selectAll("text")
