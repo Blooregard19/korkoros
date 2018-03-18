@@ -53,11 +53,11 @@ var arc = d3.arc()
   .startAngle(0)
   .endAngle(2*Math.PI);
 
-var radius = d3.scale.linear()
+var radius = d3.scaleLinear()
   .domain([start, end])
   .range([0, d3.min([width,height])/2-20]);
 
-var angle = d3.scale.linear()
+var angle = d3.scaleLinear()
   .domain([0,num_axes])
   .range([0,360])
 
