@@ -69,7 +69,7 @@ var svg = d3.select("#chart").append("svg")
 
 var pieces = d3.range(start, end+0.001, (end-start)/1000);
 
-var spiral = d3.line.radial()
+var spiral = d3.radialLine()
   .interpolate("cardinal")
   .angle(theta)
   .radius(radius);
