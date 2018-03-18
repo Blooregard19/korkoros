@@ -17,3 +17,6 @@ http://bl.ocks.org/duopixel/4063326
 
 https://bl.ocks.org/arpitnarechania/027e163073864ef2ac4ceb5c2c0bf616
 
+https://bl.ocks.org/owenr/d05687e3d34027ac4aef4db6e913b9f7
+
+Teszt: https://rawgit.com/Blooregard19/korkoros/master/index.html
