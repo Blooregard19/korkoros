@@ -102,9 +102,9 @@ svg.selectAll(".axis")
     .attr("transform", function(d) { return "rotate(" + -90 + ")" })
 
 svg.selectAll(".spiral")
-  .transition().duration(750)
     .data([pieces])
-  .enter().append("path")      
+  .enter().append("path")
+    .transition().duration(750)
     .attr("class", "spiral")
     .attr("d", spiral)
     .attr("transform", function(d) { return "rotate(" + 90 + ")" });
