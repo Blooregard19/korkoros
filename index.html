@@ -105,8 +105,8 @@ var gorbe = svg.selectAll(".spiral")
     .data([pieces])
   .enter().append("path")
     .attr("class", "spiral")
-    .attr("d", spiral)
-    .attr("transform", function(d) { return "rotate(" + 90 + ")" });
+    .attr("d", spiral);
+    //.attr("transform", function(d) { return "rotate(" + 90 + ")" });
       //.transition().duration(750)
       //.attr("stroke-dashoffset", 0)
 var totalLength = gorbe.node().getTotalLength();
