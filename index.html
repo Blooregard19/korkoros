@@ -81,25 +81,25 @@ var spiral = d3.radialLine()
 //  .attr("y", -height/2+16)
 //  .attr("text-anchor", "middle")
 
-svg.selectAll("circle.tick")
-    .data(d3.range(end,start,(start-end)/4))
-  .enter().append("circle")
-    .attr("class", "tick")
-    .attr("cx", 0)
-    .attr("cy", 0)
-    .attr("r", function(d) { return radius(d); })
+//svg.selectAll("circle.tick")
+//    .data(d3.range(end,start,(start-end)/4))
+//  .enter().append("circle")
+//    .attr("class", "tick")
+//    .attr("cx", 0)
+//    .attr("cy", 0)
+//    .attr("r", function(d) { return radius(d); })
 
-svg.selectAll(".axis")
-    .data(d3.range(num_axes))
-  .enter().append("g")
-    .attr("class", "axis")
-    .attr("transform", function(d) { return "rotate(" + -angle(d) + ")"; })
-  .call(radial_tick)
-  .append("text")
-    .attr("y", radius(end)+13)
-    .text(function(d) { return angle(d) + "°"; })
-    .attr("text-anchor", "middle")
-    .attr("transform", function(d) { return "rotate(" + -90 + ")" })
+//svg.selectAll(".axis")
+//    .data(d3.range(num_axes))
+//  .enter().append("g")
+//    .attr("class", "axis")
+//    .attr("transform", function(d) { return "rotate(" + -angle(d) + ")"; })
+//  .call(radial_tick)
+//  .append("text")
+//    .attr("y", radius(end)+13)
+//    .text(function(d) { return angle(d) + "°"; })
+//    .attr("text-anchor", "middle")
+//    .attr("transform", function(d) { return "rotate(" + -90 + ")" })
 
 var gorbe = svg.selectAll(".spiral")
     .data([pieces])
@@ -118,20 +118,20 @@ gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0);
       
-function radial_tick(selection) {
-  selection.each(function(axis_num) {
-    d3.axisBottom()
-      .scale(radius)
-      .ticks(5)
-      .tickValues( axis_num == tick_axis ? null : [])
-      //.orient("bottom")(d3.select(this))
+//function radial_tick(selection) {
+//  selection.each(function(axis_num) {
+//    d3.axisBottom()
+//      .scale(radius)
+//      .ticks(5)
+//      .tickValues( axis_num == tick_axis ? null : [])
+//      //.orient("bottom")(d3.select(this))
 
-    d3.select(this)
-      .selectAll("text")
-      .attr("text-anchor", "bottom")
-      .attr("transform", "rotate(" + angle(axis_num) + ")")
-  });
-}
+//    d3.select(this)
+//      .selectAll("text")
+//      .attr("text-anchor", "bottom")
+//      .attr("transform", "rotate(" + angle(axis_num) + ")")
+//  });
+//}
     </script>
   </body>
 </html>
