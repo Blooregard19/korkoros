@@ -104,10 +104,10 @@ svg.selectAll(".axis")
 svg.selectAll(".spiral")
     .data([pieces])
   .enter().append("path")
-    .transition().duration(750)
     .attr("class", "spiral")
     .attr("d", spiral)
-    .attr("transform", function(d) { return "rotate(" + 90 + ")" });
+    .attr("transform", function(d) { return "rotate(" + 90 + ")" })
+      .transition().duration(750);
 
 function radial_tick(selection) {
   selection.each(function(axis_num) {
