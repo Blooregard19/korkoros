@@ -115,7 +115,7 @@ gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
       .attr("stroke-dashoffset", totalLength)
       .transition()
         .duration(2500)
-        //.ease("linear")
+        .ease(d3.easeLinear())
         .attr("stroke-dashoffset", 0);
       
 function radial_tick(selection) {
