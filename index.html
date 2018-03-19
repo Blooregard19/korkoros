@@ -101,14 +101,23 @@ svg.selectAll(".axis")
     .attr("text-anchor", "middle")
     .attr("transform", function(d) { return "rotate(" + -90 + ")" })
 
-svg.selectAll(".spiral")
+var gorbe = svg.selectAll(".spiral")
     .data([pieces])
   .enter().append("path")
     .attr("class", "spiral")
     .attr("d", spiral)
-    .attr("transform", function(d) { return "rotate(" + 90 + ")" })
-      .transition().duration(750);
+    .attr("transform", function(d) { return "rotate(" + 90 + ")" });
+      //.transition().duration(750)
+      //.attr("stroke-dashoffset", 0)
+var totalLength = gorbe.node().getTotalLength();
 
+gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
+      .attr("stroke-dashoffset", totalLength)
+      .transition()
+        .duration(750)
+        .ease("linear")
+        .attr("stroke-dashoffset", 0);
+      
 function radial_tick(selection) {
   selection.each(function(axis_num) {
     d3.axisBottom()
