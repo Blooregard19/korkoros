@@ -19,6 +19,10 @@ https://bl.ocks.org/arpitnarechania/027e163073864ef2ac4ceb5c2c0bf616
 
 https://bl.ocks.org/owenr/d05687e3d34027ac4aef4db6e913b9f7
 
+egy megoldás: https://bl.ocks.org/emmasaunders/75ce6bde05c4bd94771f
+
+https://gist.github.com/emilford/3dd5ea35055a50b3961e#file-live-js-coffee-L63
+
 slider: https://bl.ocks.org/mbostock/6452972
 
 Teszt: https://rawgit.com/Blooregard19/korkoros/master/index.html
