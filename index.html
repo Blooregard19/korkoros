@@ -57,9 +57,9 @@ var radius = d3.scaleLinear()
   .domain([start, end])
   .range([d3.min([width,height])/2-60, d3.min([width,height])/2-20]);
 
-var angle = d3.scaleLinear()
-  .domain([0,num_axes])
-  .range([0,360])
+//var angle = d3.scaleLinear()
+//  .domain([0,num_axes])
+//  .range([0,360])
 
 var svg = d3.select("#chart").append("svg")
     .attr("width", width)
