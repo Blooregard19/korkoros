@@ -40,11 +40,12 @@
 
 var width = 400,
     height = 430
-    num_axes = 4,
+    num_axes = 8,
     tick_axis = 1,
     start = 0
     end = 2;
-
+// ezt a függvényt kell módosítani, hogy számolni tudja az évből eltelt időszakot, ami alapján meg tudja határozni a szöget
+// az eltelt időszaknál jöhet szóba a d3.timeDay és egyéb függvény, dátum mínusz évkezdet működhet anglenél, radiusnál teljes hossz évben mérve
 var theta = function(r) {
   return 2*Math.PI*r;
 };
@@ -56,7 +57,7 @@ var arc = d3.arc()
 var radius = d3.scaleLinear()
   .domain([start, end])
   .range([d3.min([width,height])/2-60, d3.min([width,height])/2-20]);
-
+// ezt kikommentezve is működik, tehát a d3.radialLine().angle nem megváltoztatható
 //var angle = d3.scaleLinear()
 //  .domain([0,num_axes])
 //  .range([0,360])
