@@ -47,7 +47,7 @@ var width = 400,
 // ezt a függvényt kell módosítani, hogy számolni tudja az évből eltelt időszakot, ami alapján meg tudja határozni a szöget
 // az eltelt időszaknál jöhet szóba a d3.timeDay és egyéb függvény, dátum mínusz évkezdet működhet anglenél, radiusnál teljes hossz évben mérve
 var theta = function(r) {
-  r = d3.timeDay.count(d3.timeYear.floor(r), r);
+  r = d3.timeDay.count(d3.timeYear.floor(r), r)/365;
   return 2*Math.PI*r;
 };
 
