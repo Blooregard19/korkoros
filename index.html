@@ -70,7 +70,8 @@ var svg = d3.select("#chart").append("svg")
     .attr("transform", "translate(" + width/2 + "," + (height/2+8) +")");
 
 var pieces = d3.timeDay.range(start, end, 1);
-
+console.log(pieces);
+console.log(theta(pieces));
 var spiral = d3.radialLine()
   //.interpolate("cardinal")
   .angle(theta)
