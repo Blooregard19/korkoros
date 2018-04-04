@@ -42,11 +42,12 @@ var width = 400,
     height = 430
     num_axes = 8,
     tick_axis = 1,
-    start = 0
-    end = 2;
+    start = new Date(2015, 01, 01),
+    end = new Date(2016, 12, 31);
 // ezt a függvényt kell módosítani, hogy számolni tudja az évből eltelt időszakot, ami alapján meg tudja határozni a szöget
 // az eltelt időszaknál jöhet szóba a d3.timeDay és egyéb függvény, dátum mínusz évkezdet működhet anglenél, radiusnál teljes hossz évben mérve
 var theta = function(r) {
+  r = d3.timeDay.count(d3.timeYear.floor(r), r);
   return 2*Math.PI*r;
 };
 
@@ -68,7 +69,7 @@ var svg = d3.select("#chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + width/2 + "," + (height/2+8) +")");
 
-var pieces = d3.range(start, end+0.001, (end-start)/1000);
+var pieces = d3.timeDay.range(start, end, 1);
 
 var spiral = d3.radialLine()
   //.interpolate("cardinal")
