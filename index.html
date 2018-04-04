@@ -55,7 +55,7 @@ var arc = d3.arc()
   .startAngle(0)
   .endAngle(2*Math.PI);
 
-var radius = d3.scaleLinear()
+var radius = d3.scaleTime()
   .domain([start, end])
   .range([d3.min([width,height])/2-60, d3.min([width,height])/2-20]);
 // ezt kikommentezve is működik, tehát a d3.radialLine().angle nem megváltoztatható
