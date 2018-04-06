@@ -131,7 +131,7 @@ var pont = svg.selectAll(".pont")
     .attr("fill-opacity", 0)
   .transition()
     .delay(function(d) { return (d3.timeDay.count(start, d) / d3.timeDay.count(start, end)) * dur ; })
-    .duration(500)
+    .duration(0)
     .attr("fill-opacity", 1);
 console.log(Math.cos(theta([new Date("2015-01-01")])));
 console.log(Math.sin(theta([new Date("2015-01-01")])));
