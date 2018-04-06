@@ -125,9 +125,8 @@ var pont = svg.selectAll(".pont")
     .data([new Date("2015-01-01")])
   .enter().append("circle")
     .attr("class", "pont")
-    .attr("cx", 0)
-    .attr("cy", 0)
-    .attr("r", function(d) { return radius(d); });
+    .attr("cx", function(d) { return Math.cos(theta(d)) * radius(d); })
+    .attr("cy", function(d) { return Math.sin(theta(d)) * radius(d); });
 
 //function radial_tick(selection) {
 //  selection.each(function(axis_num) {
