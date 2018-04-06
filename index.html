@@ -120,7 +120,15 @@ gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
         .duration(2500)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0);
-      
+
+var pont = svg.selectAll(".pont")
+    .data([new Date("2015-01-01")])
+  .enter().append("circle")
+    .attr("class", "pont")
+    .attr("cx", 0)
+    .attr("cy", 0)
+    .attr("r", function(d) { return radius(d); });
+
 //function radial_tick(selection) {
 //  selection.each(function(axis_num) {
 //    d3.axisBottom()
