@@ -23,6 +23,9 @@ egy megoldás: https://bl.ocks.org/emmasaunders/75ce6bde05c4bd94771f
 
 https://gist.github.com/emilford/3dd5ea35055a50b3961e#file-live-js-coffee-L63
 
+késleltetés az eltelt időszakhoz köthető:
+https://bl.ocks.org/mbostock/1125997
+
 slider: https://bl.ocks.org/mbostock/6452972
 
 Teszt: https://rawgit.com/Blooregard19/korkoros/master/index.html
