@@ -119,7 +119,7 @@ gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0);
 
-var dates = [new Date("2016-03-31"), new Date("2016-05-19"), new Date("2015-10-07"), new Date("2016-12-06")];
+var dates = [new Date("2015-10-07"), new Date("2016-03-31"), new Date("2016-05-19"), new Date("2016-12-06")];
 var pont = svg.selectAll(".pont")
     .data(dates)
   .enter().append("circle")
