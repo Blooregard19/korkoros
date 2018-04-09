@@ -44,7 +44,7 @@ var width = 400,
     tick_axis = 1,
     start = new Date("2015-01-01"),
     end = new Date("2016-12-31")
-    dur = 10000;
+    dur = 20000;
 // ezt a függvényt kell módosítani, hogy számolni tudja az évből eltelt időszakot, ami alapján meg tudja határozni a szöget
 // az eltelt időszaknál jöhet szóba a d3.timeDay és egyéb függvény, dátum mínusz évkezdet működhet anglenél, radiusnál teljes hossz évben mérve
 var theta = function(r) {
@@ -130,7 +130,7 @@ var pont = svg.selectAll(".pont")
     .attr("cy", function(d) { return Math.sin(theta(d) - Math.PI/2) * radius(d); })
     .attr("opacity", 0)
     .attr("fill", "white")
-    .attr("stroke", "red")
+    .attr("stroke", "blue")
   .transition()
     .delay(function(d) { return (d3.timeDay.count(start, d) / d3.timeDay.count(start, end)) * dur ; })
     .duration(0)
