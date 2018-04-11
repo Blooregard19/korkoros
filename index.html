@@ -122,7 +122,8 @@ console.log(gorbe);
 gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
       .attr("stroke-dashoffset", totalLength)
       .transition()
-        .duration(dur)
+        .delay(function(d) { return (d3.timeDay.count(start, d[0]) / d3.timeDay.count(start, end)) * dur ; })
+        .duration(function(d) { return (d3.timeDay.count(d[0], d3.max(d)) / d3.timeDay.count(start, end)) * dur ; })
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0);
 
