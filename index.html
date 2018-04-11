@@ -70,7 +70,7 @@ var svg = d3.select("#chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + width/2 + "," + (height/2+8) +")");
 
-var dates = [start, new Date("2015-10-07"), new Date("2016-03-31"), new Date("2016-05-19"), new Date("2016-12-06"), end];
+var dates = [start, new Date("2015-04-07"), new Date("2015-10-07"), new Date("2016-03-31"), new Date("2016-05-19"), new Date("2016-12-06"), end];
 var datepairs = d3.pairs(dates);
 var pieces = datepairs.map(function(d) { return d3.timeDay.range(d[0], d[1], 1);});
 //var pieces = d3.timeDay.range(start, end, 1);
@@ -127,7 +127,7 @@ gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0);
 
-var dates = [new Date("2015-10-07"), new Date("2016-03-31"), new Date("2016-05-19"), new Date("2016-12-06")];
+//var dates = [new Date("2015-10-07"), new Date("2016-03-31"), new Date("2016-05-19"), new Date("2016-12-06")];
 var pont = svg.selectAll(".pont")
     .data(dates)
   .enter().append("circle")
