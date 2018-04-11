@@ -28,8 +28,8 @@
       }
       path.spiral {
         fill: none;
-        stroke: #ADFF2F;
-        stroke-width: 3px;
+        stroke: #556B2F;
+        stroke-width: 5px;
       }
     </style>
   </head>
@@ -137,7 +137,7 @@ var pont = svg.selectAll(".pont")
     .attr("cy", function(d) { return Math.sin(theta(d) - Math.PI/2) * radius(d); })
     .attr("opacity", 0)
     .attr("fill", "white")
-    .attr("stroke", "blue")
+    .attr("stroke", "#FF6347")
   .transition()
     .delay(function(d) { return (d3.timeDay.count(start, d) / d3.timeDay.count(start, end)) * dur ; })
     .duration(0)
