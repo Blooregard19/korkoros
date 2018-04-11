@@ -108,10 +108,10 @@ var spiral = d3.radialLine()
 //    .attr("transform", function(d) { return "rotate(" + -90 + ")" })
 
 var gorbe = svg.selectAll(".spiral")
-    .data([pieces])
+    .data(pieces)
   .enter().append("path")
     .attr("class", "spiral")
-    .attr("d", function(d, i) {return spiral(pieces[i]);});
+    .attr("d", spiral);
     //.attr("transform", function(d) { return "rotate(" + 90 + ")" });
       //.transition().duration(750)
       //.attr("stroke-dashoffset", 0)
