@@ -74,7 +74,7 @@ var dates = [start, new Date("2015-10-07"), new Date("2016-03-31"), new Date("20
 var datepairs = d3.pairs(dates);
 var pieces = datepairs.map(function(d) { return d3.timeDay.range(d[0], d[1], 1);});
 //var pieces = d3.timeDay.range(start, end, 1);
-console.log(pieces);
+//console.log(pieces);
 var spiral = d3.radialLine()
   //.interpolate("cardinal")
   .angle(theta)
@@ -116,6 +116,8 @@ var gorbe = svg.selectAll(".spiral")
       //.transition().duration(750)
       //.attr("stroke-dashoffset", 0)
 var totalLength = gorbe.node().getTotalLength();
+console.log(totalLength);
+console.log(gorbe);
 
 gorbe.attr("stroke-dasharray", totalLength + " " + totalLength)
       .attr("stroke-dashoffset", totalLength)
