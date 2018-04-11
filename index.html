@@ -71,6 +71,7 @@ var svg = d3.select("#chart").append("svg")
     .attr("transform", "translate(" + width/2 + "," + (height/2+8) +")");
 
 var pieces = d3.timeDay.range(start, end, 1);
+console.log(pieces);
 var spiral = d3.radialLine()
   //.interpolate("cardinal")
   .angle(theta)
@@ -135,10 +136,10 @@ var pont = svg.selectAll(".pont")
     .delay(function(d) { return (d3.timeDay.count(start, d) / d3.timeDay.count(start, end)) * dur ; })
     .duration(0)
     .attr("opacity", 1);
-console.log(Math.cos(theta([new Date("2015-01-01")])));
-console.log(Math.sin(theta([new Date("2015-01-01")])));
-console.log(radius([new Date("2015-01-01")]));
-console.log(theta([new Date("2015-01-01")]));
+//console.log(Math.cos(theta([new Date("2015-01-01")])));
+//console.log(Math.sin(theta([new Date("2015-01-01")])));
+//console.log(radius([new Date("2015-01-01")]));
+//console.log(theta([new Date("2015-01-01")]));
 
 //function radial_tick(selection) {
 //  selection.each(function(axis_num) {
