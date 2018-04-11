@@ -29,3 +29,12 @@ https://bl.ocks.org/mbostock/1125997
 slider: https://bl.ocks.org/mbostock/6452972
 
 Teszt: https://rawgit.com/Blooregard19/korkoros/master/index.html
+
+- csv-ből beolvasni az alapadatokat
+- az adatok felrajzolhatóak időrendi sorrendben, de jobb lenne logikai sorrendben (kijelölve a ciklus egyes szakaszait)
+- a vonalak eltérő színezése
+- tooltip az egyes pontokhoz
+- sebesség állítása
+- országválasztó felülre vagy középre (középen valószínűleg a vonalak letakarják, ezért felülre jobb)
+- körvonal egyenesre húzása
+- ciklus hosszának eloszlása OBI pontszámmal egybekötve, vélhetően egyedi pontos hisztogram kell a pont színével jelölve az OBI-pontszámot
