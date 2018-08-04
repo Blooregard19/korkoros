@@ -71,6 +71,7 @@ var svg = d3.select("#chart").append("svg")
     .attr("transform", "translate(" + width/2 + "," + (height/2+8) +")");
 
 window.onload = rajzol;
+var ssv = d3.dsvFormat(";");
 
 function rajzol() {
 d3.request("Spiral arrow.csv")
