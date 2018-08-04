@@ -79,15 +79,16 @@ d3.request("Spiral arrow.csv")
 	.response(function(xhr) { return ssv.parse(xhr.responseText)})
 	.get(function(data) {
 
+var formatDatum = d3.timeFormat("%Y.%m.%d");
 data.forEach(function(d) {
-d.PBSdate = d3.time.format("%Y.%m.%d").parse(d.PBSdate);
-d.EBPdate = d3.time.format("%Y.%m.%d").parse(d.EBPdate);
-d.EBdate = d3.time.format("%Y.%m.%d").parse(d.EBdate);
-d.IYRdate = d3.time.format("%Y.%m.%d").parse(d.IYRdate);
-d.MYRdate = d3.time.format("%Y.%m.%d").parse(d.MYRdate);
-d.YERdate = d3.time.format("%Y.%m.%d").parse(d.YERdate);
-d.ARdate = d3.time.format("%Y.%m.%d").parse(d.ARdate);
-d.CBdate = d3.time.format("%Y.%m.%d").parse(d.CBdate);
+d.PBSdate = formatDatum.parse(d.PBSdate);
+d.EBPdate = formatDatum.parse(d.EBPdate);
+d.EBdate = formatDatum.parse(d.EBdate);
+d.IYRdate = formatDatum.parse(d.IYRdate);
+d.MYRdate = formatDatum.parse(d.MYRdate);
+d.YERdate = formatDatum.parse(d.YERdate);
+d.ARdate = formatDatum.parse(d.ARdate);
+d.CBdate = formatDatum.parse(d.CBdate);
 });
 
 var data = data.filter(function (d) {return d.Country === "Magyarország"; })
