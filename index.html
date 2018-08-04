@@ -79,9 +79,9 @@ d3.request("Spiral arrow.csv")
 	.response(function(xhr) { return ssv.parse(xhr.responseText)})
 	.get(function(data) {
 
-var formatDatum = d3.timeFormat("%Y.%m.%d").parse;
+var formatDatum = d3.timeParse("%Y.%m.%d");
 data.forEach(function(d) {
-d.PBSdate = d3.timeFormat("%Y.%m.%d").parse(d.PBSdate);
+d.PBSdate = formatDatum(d.PBSdate);
 d.EBPdate = formatDatum(d.EBPdate);
 d.EBdate = formatDatum(d.EBdate);
 d.IYRdate = formatDatum(d.IYRdate);
