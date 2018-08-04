@@ -78,7 +78,7 @@ d3.request("Spiral arrow.csv")
 	.mimeType("text/plain")
 	.response(function(xhr) { return ssv.parse(xhr.responseText)})
 	.get(function(data) {
-console.log(data);
+
 var formatDatum = d3.timeParse("%Y.%m.%d");
 data.forEach(function(d) {
 d.PBSdate = formatDatum(d.PBSdate);
@@ -90,8 +90,8 @@ d.YERdate = formatDatum(d.YERdate);
 d.ARdate = formatDatum(d.ARdate);
 d.CBdate = formatDatum(d.CBdate);
 });
-console.log(data);
-var data = data.filter(function (d) {return d.Country === "Magyarország"; })
+
+//var data = data.filter(function (d) {return d.Country === "Magyarország"; }) //fájl kódolását még állítani kell
 console.log(data);
 
 var dates = [start, new Date("2015-04-07"), new Date("2015-10-07"), new Date("2016-03-31"), new Date("2016-05-19"), new Date("2016-12-06"), end];
