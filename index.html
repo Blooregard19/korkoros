@@ -73,7 +73,7 @@ var svg = d3.select("#chart").append("svg")
 window.onload = rajzol;
 
 function rajzol() {
-d3.request(ev + "_tv_01_mell_COFOG.csv")
+d3.request("Spiral arrow.csv")
 	.mimeType("text/plain")
 	.response(function(xhr) { return ssv.parse(xhr.responseText)})
 	.get(function(data) {
