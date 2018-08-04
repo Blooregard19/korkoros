@@ -70,6 +70,27 @@ var svg = d3.select("#chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + width/2 + "," + (height/2+8) +")");
 
+function rajzol() {
+d3.request(ev + "_tv_01_mell_COFOG.csv")
+	.mimeType("text/plain")
+	.response(function(xhr) { return ssv.parse(xhr.responseText)})
+	.get(function(data) {
+
+data.forEach(function(d) {
+d.PBSdate = d.PBSdate.time.format.("%Y.%m.%d").parse;
+d.EBPdate = d.EBPdate.time.format.("%Y.%m.%d").parse;
+d.EBdate = d.EBdate.time.format.("%Y.%m.%d").parse;
+d.IYRdate = d.IYRdate.time.format.("%Y.%m.%d").parse;
+d.MYRdate = d.MYRdate.time.format.("%Y.%m.%d").parse;
+d.YERdate = d.YERdate.time.format.("%Y.%m.%d").parse;
+d.ARdate = d.ARdate.time.format.("%Y.%m.%d").parse;
+d.CBdate = d.CBdate.time.format.("%Y.%m.%d").parse;
+//d.Fejezet = +d.Fejezet;
+});
+
+var data = data.filter(function (d) {return d.Country === "Magyarország"; })
+console.log(data);
+
 var dates = [start, new Date("2015-04-07"), new Date("2015-10-07"), new Date("2016-03-31"), new Date("2016-05-19"), new Date("2016-12-06"), end];
 var datepairs = d3.pairs(dates);
 var pieces = datepairs.map(function(d) { return d3.timeDay.range(d[0], d[1], 1);});
@@ -161,6 +182,8 @@ var pont = svg.selectAll(".pont")
 //      .attr("transform", "rotate(" + angle(axis_num) + ")")
 //  });
 //}
+});
+}
     </script>
   </body>
 </html>
