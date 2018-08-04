@@ -78,7 +78,7 @@ d3.request("Spiral arrow.csv")
 	.mimeType("text/plain")
 	.response(function(xhr) { return ssv.parse(xhr.responseText)})
 	.get(function(data) {
-
+console.log(data);
 var formatDatum = d3.timeParse("%Y.%m.%d");
 data.forEach(function(d) {
 d.PBSdate = formatDatum(d.PBSdate);
@@ -90,7 +90,7 @@ d.YERdate = formatDatum(d.YERdate);
 d.ARdate = formatDatum(d.ARdate);
 d.CBdate = formatDatum(d.CBdate);
 });
-
+console.log(data);
 var data = data.filter(function (d) {return d.Country === "Magyarország"; })
 console.log(data);
 
