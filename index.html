@@ -79,16 +79,16 @@ d3.request("Spiral arrow.csv")
 	.response(function(xhr) { return ssv.parse(xhr.responseText)})
 	.get(function(data) {
 
-var formatDatum = d3.timeFormat("%Y.%m.%d");
+var formatDatum = d3.timeFormat("%Y.%m.%d").parse;
 data.forEach(function(d) {
-d.PBSdate = formatDatum.parse(d.PBSdate);
-d.EBPdate = formatDatum.parse(d.EBPdate);
-d.EBdate = formatDatum.parse(d.EBdate);
-d.IYRdate = formatDatum.parse(d.IYRdate);
-d.MYRdate = formatDatum.parse(d.MYRdate);
-d.YERdate = formatDatum.parse(d.YERdate);
-d.ARdate = formatDatum.parse(d.ARdate);
-d.CBdate = formatDatum.parse(d.CBdate);
+d.PBSdate = formatDatum(d.PBSdate);
+d.EBPdate = formatDatum(d.EBPdate);
+d.EBdate = formatDatum(d.EBdate);
+d.IYRdate = formatDatum(d.IYRdate);
+d.MYRdate = formatDatum(d.MYRdate);
+d.YERdate = formatDatum(d.YERdate);
+d.ARdate = formatDatum(d.ARdate);
+d.CBdate = formatDatum(d.CBdate);
 });
 
 var data = data.filter(function (d) {return d.Country === "Magyarország"; })
